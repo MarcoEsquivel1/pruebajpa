@@ -53,8 +53,15 @@ public class pedidos extends HttpServlet {
         }
     }
 
-    private void showNewForm(HttpServletRequest request, HttpServletResponse response) {
-
+    private void showNewForm(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String view = "../views/pedido/PedidoForm.jsp";
+        try {
+            request.getRequestDispatcher(view).forward(request, response);
+        } catch (ServletException e) {
+            sendErrorToHome(request, response);
+        } catch (IOException e) {
+            sendErrorToHome(request, response);
+        }
     }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {

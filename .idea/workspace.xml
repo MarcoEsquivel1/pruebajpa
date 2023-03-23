@@ -10,32 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b33a42-4903-4675-932b-00de6dfe339d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/pedidos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/implementations/pedidoDAOImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/implementations/pedidoServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/pedidoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Pedido.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/pedidoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/layout/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/layout/nav.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteDelete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoDelete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoUpdate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dcdd411-6eca-4d83-a4ee-b12edbf29528.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dcdd411-6eca-4d83-a4ee-b12edbf29528.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pruebajpa/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/clientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/clienteServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/clienteServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/clienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/clienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/clientes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/pedidos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +176,7 @@
       <workItem from="1679513447465" duration="314000" />
       <workItem from="1679513772295" duration="2008000" />
       <workItem from="1679546807045" duration="6586000" />
-      <workItem from="1679585122821" duration="11298000" />
+      <workItem from="1679585122821" duration="12967000" />
     </task>
     <servers />
   </component>

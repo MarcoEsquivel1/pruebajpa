@@ -9,7 +9,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b33a42-4903-4675-932b-00de6dfe339d" name="Changes" comment="" />
+    <list default="true" id="f8b33a42-4903-4675-932b-00de6dfe339d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/pedidos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/implementations/pedidoDAOImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/implementations/pedidoServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/pedidoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/pedidoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/layout/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/layout/nav.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteDelete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteUpdate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoDelete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dcdd411-6eca-4d83-a4ee-b12edbf29528.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dcdd411-6eca-4d83-a4ee-b12edbf29528.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pruebajpa/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/clientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/clienteServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/clienteServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/clienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/clienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/clientes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteList.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +45,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -50,8 +83,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Marco/IdeaProjects/pruebajpa",
+    "last_opened_file_path": "C:/Users/Marcos/IdeaProjects/pruebajpa/src/main/webapp/views",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,9 +101,17 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Marcos\IdeaProjects\pruebajpa\src\main\webapp\views" />
+      <recent name="C:\Users\Marcos\IdeaProjects\pruebajpa\src\main\webapp\views\cliente" />
+      <recent name="C:\Users\Marcos\IdeaProjects\pruebajpa\src\main\webapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marcos\IdeaProjects\pruebajpa\src\main\webapp\views\cliente" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="GlassFish 6" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 6" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="GlassFish 6" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 6.2023.1" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/app" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <deployment>
@@ -156,6 +198,7 @@
       <workItem from="1679513447465" duration="314000" />
       <workItem from="1679513772295" duration="2008000" />
       <workItem from="1679546807045" duration="6586000" />
+      <workItem from="1679585122821" duration="11298000" />
     </task>
     <servers />
   </component>

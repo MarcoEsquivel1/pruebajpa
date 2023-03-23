@@ -6,8 +6,9 @@
     <persistence-unit name="default">
         <jta-data-source>jdbc/pruebajpa</jta-data-source>
         <class>models.Cliente</class>
+        <class>models.Pedido</class>
         <properties>
-            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
             <property name="eclipselink.logging.level" value="FINEST"/>
         </properties>
     </persistence-unit>

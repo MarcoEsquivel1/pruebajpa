@@ -7,18 +7,11 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-</head>
-<body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-
-<div class="container pt-5" style="height: 88%">
+<%@ page import="models.Cliente" %>
+<%@ page import="java.util.List" %>
+<jsp:include page="/layout/nav.jsp"></jsp:include>
+<h1 class="mb-3" style="text-align: center">Clientes</h1>
+<a href="${pageContext.request.contextPath}/clientes/create" class="btn btn-success my-3 btn-sm">Agregar</a>
     <table class="table table-striped table-hover">
         <thead>
         <tr>
@@ -27,6 +20,7 @@
             <th scope="col">Direccion</th>
             <th scope="col">Telefono</th>
             <th scope="col">Email</th>
+            <th scope="col">Acciones</th>
         </tr>
         </thead>
         <tbody>
@@ -37,11 +31,12 @@
                 <td><c:out value="${cliente.direccion}"/></td>
                 <td><c:out value="${cliente.telefono}"/></td>
                 <td><c:out value="${cliente.email}"/></td>
+                <td>
+                    <a href="${pageContext.request.contextPath}/clientes/edit?id=${cliente.id}" class="btn btn-primary">Editar</a>
+                    <a href="${pageContext.request.contextPath}/clientes/delete?id=${cliente.id}" class="btn btn-danger">Eliminar</a>
+                </td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
-</div>
-
-</body>
-</html>
+<jsp:include page="/layout/footer.jsp"></jsp:include>

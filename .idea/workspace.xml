@@ -13,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/pedidos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +39,8 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -63,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Marcos/IdeaProjects/pruebajpa/src/main/webapp/views",
+    "last_opened_file_path": "C:/Users/Marcos/IdeaProjects/practica0223",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -176,7 +177,8 @@
       <workItem from="1679513447465" duration="314000" />
       <workItem from="1679513772295" duration="2008000" />
       <workItem from="1679546807045" duration="6586000" />
-      <workItem from="1679585122821" duration="12967000" />
+      <workItem from="1679585122821" duration="13054000" />
+      <workItem from="1679612146175" duration="4324000" />
     </task>
     <servers />
   </component>

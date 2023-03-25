@@ -29,7 +29,7 @@
             <tr>
                 <td>${pedido.id}</td>
                 <td>${pedido.cliente.nombre}</td>
-                <td>${pedido.fecha}</td>
+                <td>${pedido.getFechaString()}</td>
                 <td>${pedido.total}</td>
                 <td>${pedido.estado}</td>
                 <td>

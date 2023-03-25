@@ -86,4 +86,9 @@ public class Pedido {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
+
+    public String getFechaString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        return sdf.format(fecha);
+    }
 }

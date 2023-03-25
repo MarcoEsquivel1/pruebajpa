@@ -37,5 +37,10 @@
     <div class="form-group my-3">
         <button type="submit" class="btn btn-primary" >Guardar</button>
     </div>
+    <c:if test="${not empty error}">
+        <div class="alert alert-danger" role="alert">
+            ${error}
+        </div>
+    </c:if>
   </form>
 <jsp:include page="/layout/footer.jsp"></jsp:include>

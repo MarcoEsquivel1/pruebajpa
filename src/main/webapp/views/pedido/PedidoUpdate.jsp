@@ -30,7 +30,7 @@
     </div>
     <div class="form-group my-3">
         <label for="fecha">Fecha</label>
-        <input type="date" class="form-control" id="fecha" name="fecha" value="${pedido.fecha}" >
+        <input type="date" class="form-control" id="fecha" name="fecha" value="${pedido.getFechaString()}" >
     </div>
      <div class="form-group my-3">
         <button type="submit" class="btn btn-primary">Guardar</button>

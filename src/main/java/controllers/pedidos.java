@@ -12,6 +12,7 @@ import services.clienteService;
 import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -83,11 +84,33 @@ public class pedidos extends HttpServlet {
     }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
-
+        String view = "../views/pedido/PedidoUpdate.jsp";
+        searchPedido(request, response, view);
     }
 
     private void deletePedido(HttpServletRequest request, HttpServletResponse response) {
+        String view = "../views/pedido/PedidoDelete.jsp";
+        searchPedido(request, response, view);
+    }
 
+    private void searchPedido(HttpServletRequest request, HttpServletResponse response, String view) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Pedido pedido = null;
+        try {
+            Pedido pedidoBuscado = new Pedido();
+            pedidoBuscado.setId(id);
+            pedido = pedidoService.buscar(pedidoBuscado);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        request.setAttribute("pedido", pedido);
+        try {
+            request.getRequestDispatcher(view).forward(request, response);
+        } catch (ServletException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void sendErrorToHome(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -118,11 +141,14 @@ public class pedidos extends HttpServlet {
         String view = "../views/pedido/PedidoForm.jsp";
         String error = "";
         try {
+            // Data to save
             String clienteId = request.getParameter("cliente");
             SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
             Date dateFormateada = formato.parse(request.getParameter("fecha").toString());
             String total = request.getParameter("total");
             String estado = request.getParameter("estado");
+
+            // Save data into model
             Pedido pedido = new Pedido();
             Cliente clienteBuscado = new Cliente();
             clienteBuscado.setId(Integer.parseInt(clienteId));
@@ -131,6 +157,8 @@ public class pedidos extends HttpServlet {
             pedido.setFecha(dateFormateada);
             pedido.setTotal(BigDecimal.valueOf(Double.parseDouble(total)));
             pedido.setEstado(estado);
+
+            // Save data into database
             pedidoService.insertar(pedido);
         } catch (Exception e) {
 
@@ -144,9 +172,57 @@ public class pedidos extends HttpServlet {
     }
 
     private void updatePedido(HttpServletRequest request, HttpServletResponse response) {
+        String view = "../views/pedido/PedidoList.jsp";
+        Pedido pedido = null;
+        try {
+            // Data to update
+            String id = request.getParameter("id");
+            SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+            Date dateFormateada = formato.parse(request.getParameter("fecha").toString());
+            String total = request.getParameter("total");
+            String estado = request.getParameter("estado");
+
+            // Update data into model
+            Pedido pedidoBuscado = new Pedido();
+            pedidoBuscado.setId(Integer.parseInt(id));
+            pedido = pedidoService.buscar(pedidoBuscado);
+            pedido.setFecha(dateFormateada);
+            pedido.setTotal(BigDecimal.valueOf(Double.parseDouble(total)));
+            pedido.setEstado(estado);
+
+            // Update data into database
+            pedidoService.actualizar(pedido);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            response.sendRedirect(request.getContextPath() + "/pedidos");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void destroyPedido(HttpServletRequest request, HttpServletResponse response) {
-        
+        String view = "../views/pedido/PedidoList.jsp";
+        Pedido pedido = null;
+        try {
+            // Data to delete
+            String id = request.getParameter("id");
+
+            // Delete data into model
+            Pedido pedidoBuscado = new Pedido();
+            pedidoBuscado.setId(Integer.parseInt(id));
+            pedido = pedidoService.buscar(pedidoBuscado);
+
+            // Delete data into database
+            pedidoService.eliminar(pedido);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            response.sendRedirect(request.getContextPath() + "/pedidos");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

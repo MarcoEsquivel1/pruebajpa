@@ -14,7 +14,7 @@
         <h4 class="alert-heading">¿Está seguro de eliminar el pedido?</h4>
         <p>Total: ${pedido.total}</p>
         <p>Estado: ${pedido.estado}</p>
-        <p>Fecha: ${pedido.fecha}</p>
+        <p>Fecha: ${pedido.getFechaString()}</p>
 
         <hr>
         <form action="${pageContext.request.contextPath}/pedidos/destroy" method="post">

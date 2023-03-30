@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/layout/nav.jsp"></jsp:include>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<h1 class="mb-5" style="text-align: center">Pedidos</h1>
 
-<table  class="table table-striped table-bordered table-hover table-sm">
+<h1 class="mb-3" style="text-align: center">Pedidos</h1>
+<a href="${pageContext.request.contextPath}/pedidos/create" class="btn btn-success my-3 btn-sm">Agregar</a>
+<table class="table table-striped table-hover">
     <thead>
     <tr>
         <th scope="col">ID</th>
@@ -22,7 +23,6 @@
     </tr>
     </thead>
     <tbody>
-    <a href="${pageContext.request.contextPath}/pedidos/create" class="btn btn-success my-3 btn-sm">Agregar</a>
 
     <c:if test="${pedidos != null}">
         <c:forEach items="${pedidos}" var="pedido">
@@ -33,8 +33,8 @@
                 <td>${pedido.total}</td>
                 <td>${pedido.estado}</td>
                 <td>
-                    <a href="${pageContext.request.contextPath}/pedidos/edit?id=${pedido.id}" class="btn btn-warning btn-sm">Editar</a>
-                    <a href="${pageContext.request.contextPath}/pedidos/delete?id=${pedido.id}" class="btn btn-danger btn-sm">Eliminar</a>
+                    <a href="${pageContext.request.contextPath}/pedidos/edit?id=${pedido.id}" class="btn btn-primary">Editar</a>
+                    <a href="${pageContext.request.contextPath}/pedidos/delete?id=${pedido.id}" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
         </c:forEach>

@@ -1,18 +1,14 @@
 package controllers;
 
+import interfaces.Operations;
 import jakarta.inject.Inject;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import models.Cliente;
 import models.Pedido;
-import services.pedidoService;
-import services.clienteService;
-
-import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -22,9 +18,9 @@ import static java.lang.System.out;
 @WebServlet(name = "pedidos", urlPatterns = {"/pedidos", "/pedidos/create", "/pedidos/update", "/pedidos/delete", "/pedidos/edit", "/pedidos/save", "/pedidos/destroy"})
 public class pedidos extends HttpServlet {
     @Inject
-    pedidoService pedidoService;
+    Operations<Pedido> pedidoService;
     @Inject
-    clienteService clienteService;
+    Operations<Cliente> clienteService;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getServletPath();

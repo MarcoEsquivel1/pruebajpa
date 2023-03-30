@@ -10,6 +10,7 @@
 <%@ page import="models.Cliente" %>
 <%@ page import="java.util.List" %>
 <jsp:include page="/layout/nav.jsp"></jsp:include>
+
 <h1 class="mb-3" style="text-align: center">Clientes</h1>
 <a href="${pageContext.request.contextPath}/clientes/create" class="btn btn-success my-3 btn-sm">Agregar</a>
     <table class="table table-striped table-hover">

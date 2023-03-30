@@ -10,11 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b33a42-4903-4675-932b-00de6dfe339d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/Operations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/clientes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/pedidos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoDelete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoDelete.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/clienteDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/clienteServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/clienteServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/pedidoDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/pedidoServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/pedidoServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/clienteDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/pedidoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/clienteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/pedidoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/cliente/ClienteList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/pedido/PedidoList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +73,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Marco/IdeaProjects/practica0223",
+    "last_opened_file_path": "C:/Users/Marco/IdeaProjects/pruebajpa",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -180,6 +189,7 @@
       <workItem from="1679585122821" duration="13054000" />
       <workItem from="1679612146175" duration="4324000" />
       <workItem from="1679786774301" duration="3179000" />
+      <workItem from="1680151158039" duration="2630000" />
     </task>
     <servers />
   </component>

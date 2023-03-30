@@ -4,7 +4,7 @@ import java.io.*;
 import java.sql.SQLException;
 import java.util.List;
 
-import services.clienteService;
+import interfaces.Operations;
 import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
@@ -17,7 +17,7 @@ import static java.lang.System.out;
 public class clientes extends HttpServlet {
 
     @Inject
-    clienteService clienteService;
+    Operations<Cliente> clienteService;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String action = request.getServletPath();
@@ -85,7 +85,7 @@ public class clientes extends HttpServlet {
         try {
             Cliente buscar = new Cliente();
             buscar.setId(id);
-            cliente = clienteService.buscar(buscar);
+            cliente = (Cliente) clienteService.buscar(buscar);
         } catch (Exception e) {
             String error = "No se pudo obtener el cliente";
             request.setAttribute("error", error);
@@ -193,7 +193,7 @@ public class clientes extends HttpServlet {
             Cliente clienteBuscar = new Cliente();
             Cliente clienteEliminar = null;
             clienteBuscar.setId(id);
-            clienteEliminar = clienteService.buscar(clienteBuscar);
+            clienteEliminar = (Cliente)clienteService.buscar(clienteBuscar);
             clienteService.eliminar(clienteEliminar);
         } catch (Exception e) {
             String error = "No se pudo eliminar el cliente";

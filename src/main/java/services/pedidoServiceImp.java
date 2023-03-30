@@ -21,7 +21,8 @@ public class pedidoServiceImp implements Operations<Pedido> {
     }
 
     @Override
-    public void eliminar(Pedido pedido) {
+    public void eliminar(int id) {
+        Pedido pedido = em.find(Pedido.class, id);
         em.remove(em.merge(pedido));
     }
 
@@ -31,7 +32,7 @@ public class pedidoServiceImp implements Operations<Pedido> {
     }
 
     @Override
-    public Pedido buscar(Pedido pedido) {
-        return em.find(Pedido.class, pedido.getId());
+    public Pedido buscar(int id) {
+        return em.find(Pedido.class, id);
     }
 }

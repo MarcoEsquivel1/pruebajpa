@@ -93,9 +93,7 @@ public class pedidos extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Pedido pedido = null;
         try {
-            Pedido pedidoBuscado = new Pedido();
-            pedidoBuscado.setId(id);
-            pedido = pedidoService.buscar(pedidoBuscado);
+            pedido = pedidoService.buscar(id);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -138,7 +136,7 @@ public class pedidos extends HttpServlet {
         String error = "";
         try {
             // Data to save
-            String clienteId = request.getParameter("cliente");
+            int clienteId = Integer.parseInt(request.getParameter("cliente"));
             SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
             Date dateFormateada = formato.parse(request.getParameter("fecha").toString());
             String total = request.getParameter("total");
@@ -146,10 +144,8 @@ public class pedidos extends HttpServlet {
 
             // Save data into model
             Pedido pedido = new Pedido();
-            Cliente clienteBuscado = new Cliente();
-            clienteBuscado.setId(Integer.parseInt(clienteId));
-            pedido.setCliente(clienteService.buscar(clienteBuscado));
-            pedido.setIdCliente(Integer.parseInt(clienteId));
+            pedido.setCliente(clienteService.buscar(clienteId));
+            pedido.setIdCliente(clienteId);
             pedido.setFecha(dateFormateada);
             pedido.setTotal(BigDecimal.valueOf(Double.parseDouble(total)));
             pedido.setEstado(estado);
@@ -172,16 +168,14 @@ public class pedidos extends HttpServlet {
         Pedido pedido = null;
         try {
             // Data to update
-            String id = request.getParameter("id");
+            int id = Integer.parseInt(request.getParameter("id"));
             SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
             Date dateFormateada = formato.parse(request.getParameter("fecha").toString());
             String total = request.getParameter("total");
             String estado = request.getParameter("estado");
 
             // Update data into model
-            Pedido pedidoBuscado = new Pedido();
-            pedidoBuscado.setId(Integer.parseInt(id));
-            pedido = pedidoService.buscar(pedidoBuscado);
+            pedido = pedidoService.buscar(id);
             pedido.setFecha(dateFormateada);
             pedido.setTotal(BigDecimal.valueOf(Double.parseDouble(total)));
             pedido.setEstado(estado);
@@ -203,15 +197,10 @@ public class pedidos extends HttpServlet {
         Pedido pedido = null;
         try {
             // Data to delete
-            String id = request.getParameter("id");
-
-            // Delete data into model
-            Pedido pedidoBuscado = new Pedido();
-            pedidoBuscado.setId(Integer.parseInt(id));
-            pedido = pedidoService.buscar(pedidoBuscado);
+            int id = Integer.parseInt(request.getParameter("id"));
 
             // Delete data into database
-            pedidoService.eliminar(pedido);
+            pedidoService.eliminar(id);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

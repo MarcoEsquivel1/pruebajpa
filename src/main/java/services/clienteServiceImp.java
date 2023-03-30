@@ -22,7 +22,8 @@ public class clienteServiceImp implements Operations<Cliente> {
     }
 
     @Override
-    public void eliminar(Cliente cliente) {
+    public void eliminar(int id) {
+        Cliente cliente = em.find(Cliente.class, id);
         em.remove(em.merge(cliente));
     }
 
@@ -30,7 +31,7 @@ public class clienteServiceImp implements Operations<Cliente> {
     public void actualizar(Cliente cliente) { em.merge(cliente); }
 
     @Override
-    public Cliente buscar(Cliente cliente) {
-        return em.find(Cliente.class, cliente.getId());
+    public Cliente buscar(int id) {
+        return em.find(Cliente.class, id);
     }
 }

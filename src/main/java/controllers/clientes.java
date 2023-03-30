@@ -83,9 +83,7 @@ public class clientes extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Cliente cliente = null;
         try {
-            Cliente buscar = new Cliente();
-            buscar.setId(id);
-            cliente = (Cliente) clienteService.buscar(buscar);
+            cliente = (Cliente) clienteService.buscar(id);
         } catch (Exception e) {
             String error = "No se pudo obtener el cliente";
             request.setAttribute("error", error);
@@ -160,13 +158,20 @@ public class clientes extends HttpServlet {
 
     private void updateCliente(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String view = "../views/cliente/ClienteList.jsp";
-        Cliente cliente = new Cliente();
-        cliente.setId(Integer.parseInt(request.getParameter("id")));
-        cliente.setNombre(request.getParameter("nombre"));
-        cliente.setDireccion(request.getParameter("direccion"));
-        cliente.setTelefono(request.getParameter("telefono"));
-        cliente.setEmail(request.getParameter("email"));
+        Cliente cliente = null;
         try {
+            //Data to update
+            int id = Integer.parseInt(request.getParameter("id"));
+            String nombre = request.getParameter("nombre");
+            String direccion = request.getParameter("direccion");
+            String telefono = request.getParameter("telefono");
+
+            //Upadate data
+            cliente = (Cliente) clienteService.buscar(id);
+            cliente.setNombre(nombre);
+            cliente.setDireccion(direccion);
+            cliente.setTelefono(telefono);
+
             clienteService.actualizar(cliente);
         } catch (Exception e) {
             String error = "No se pudo actualizar el cliente";
@@ -190,11 +195,7 @@ public class clientes extends HttpServlet {
         String view = "../views/cliente/ClienteList.jsp";
         int id = Integer.parseInt(request.getParameter("id"));
         try {
-            Cliente clienteBuscar = new Cliente();
-            Cliente clienteEliminar = null;
-            clienteBuscar.setId(id);
-            clienteEliminar = (Cliente)clienteService.buscar(clienteBuscar);
-            clienteService.eliminar(clienteEliminar);
+            clienteService.eliminar(id);
         } catch (Exception e) {
             String error = "No se pudo eliminar el cliente";
             request.setAttribute("error", error);
